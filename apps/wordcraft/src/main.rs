@@ -732,7 +732,9 @@ fn main() -> eframe::Result {
                 // The Launcher installs Nightly; Help › Check for Updates says so instead.
                 app.use_launcher_updates();
             } else {
-                app.set_startup_update_check(true);
+                // Patched local build: it reports an older version than the release it is
+                // built from, so the startup check would always offer an update.
+                app.set_startup_update_check(false);
                 // After the preferences, so the reason it gives is in the interface language.
                 if updates_unsafe {
                     app.disable_self_update();
