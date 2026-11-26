@@ -173,3 +173,8 @@ eframe = { git = "https://github.com/storytold/egui.git", rev = "6d518fc79968157
 egui_demo_lib = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
 egui_inspection = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
 winit = { git = "https://github.com/storytold/winit.git", rev = "a517b3846ee8457d84ee4975110bfda6797c44dc" }
+
+# Local fix (dsteele3141 fork): craft-proof without the C:..Z: LibreOffice drive scan
+# (wordcraft#3662), from ../craft-libs branch fix/no-drive-probe (based on the rev above).
+[patch."https://github.com/storytold/craft-libs"]
+craft-proof = { path = "../craft-libs/crates/proof" }
